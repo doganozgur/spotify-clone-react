@@ -4,8 +4,8 @@ import Content from 'components/Content';
 
 function App() {
   return (
-    <div className='d-flex flex-col items-stretch justify-between min-h-screen'>
-      <div className='container'>
+    <div className='min-h-screen'>
+      <div className='wrapper'>
         <Sidebar />
         <Content />
       </div>
