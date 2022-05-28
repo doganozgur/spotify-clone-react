@@ -1,0 +1,17 @@
+export let playlist = [
+    { id: 0, title: 'Synthwave' },
+    { id: 1, title: 'Osmanlı Saray Müzikleri' },
+    { id: 2, title: 'Deutsche Militärmärsche' },
+    { id: 3, title: 'Neu' },
+    { id: 4, title: 'Klas' },
+    { id: 5, title: 'Taht Kurmuşsun Kalbime' },
+    { id: 6, title: 'Beni Ağlatma' },
+    { id: 7, title: 'cermen' },
+    { id: 8, title: 'debug' },
+    { id: 9, title: 'ec' },
+    { id: 10, title: 'Fresh Finds Türkiye' },
+    { id: 11, title: 'Kurtuluş ve Cumhuriyet' },
+    { id: 12, title: 'Tarkan – Ahde Vefa' },
+    { id: 13, title: 'yerli ve milli' },
+    { id: 14, title: 'My Shazam Tracks  ' },
+]
