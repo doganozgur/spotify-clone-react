@@ -13,5 +13,10 @@
         height: calc(100% - theme('spacing.24'));
         @apply flex
     }
+    .section-title {
+        @apply text-3xl font-bold mb-6;
+        font-size: 2rem;
+        letter-spacing: -0.04em;
+    }
 
 }

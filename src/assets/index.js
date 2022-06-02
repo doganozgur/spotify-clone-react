@@ -3,7 +3,7 @@ export let playlist = [
     { id: 1, title: 'Osmanlı Saray Müzikleri' },
     { id: 2, title: 'Deutsche Militärmärsche' },
     { id: 3, title: 'Neu' },
-    { id: 4, title: 'Klas' },
+    { id: 4, title: 'klas' },
     { id: 5, title: 'Taht Kurmuşsun Kalbime' },
     { id: 6, title: 'Beni Ağlatma' },
     { id: 7, title: 'cermen' },
