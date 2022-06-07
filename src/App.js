@@ -4,7 +4,7 @@ import Content from 'components/Content';
 
 function App() {
   return (
-    <div className='min-h-screen'>
+    <div>
       <div className='wrapper'>
         <Sidebar />
         <Content />

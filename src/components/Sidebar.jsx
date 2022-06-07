@@ -4,7 +4,7 @@ import Playlists from "./Sidebar/Playlists"
 
 function Sidebar() {
   return (
-    <aside className="w-60 py-6 bg-black">
+    <aside className="w-60 py-6 bg-black min-h-screen">
       <img src={Logo} alt="Logo" className="h-10 mb-6 px-6" />
       <Menu />
       <div className="mt-6">

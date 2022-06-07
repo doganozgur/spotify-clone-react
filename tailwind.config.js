@@ -11,7 +11,7 @@ module.exports = {
         primary: '#1db954',
         active: '#282828',
         link: '#b3b3b3',
-        playbar: '#181818',
+        darkGray: '#181818',
         transparent: 'rgba(255,255,255,.1)'
       }
     },
