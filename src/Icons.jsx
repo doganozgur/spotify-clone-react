@@ -20,30 +20,54 @@ const LibraryIcon = ({ size }) => {
     )
 }
 
-const ArrowLeft = ({ size }) => {
-    return (
-        <svg xmins="http://www.w3.org/2000/svg" role="img" height={size} width={size} className="Svg-sc-1bi12j5-0 jgfuCe IYDlXmBmmUKHveMzIPCF" viewBox="0 0 24 24"><path d="M15.957 2.793a1 1 0 010 1.414L8.164 12l7.793 7.793a1 1 0 11-1.414 1.414L5.336 12l9.207-9.207a1 1 0 011.414 0z" fill="currentColor" /></svg>
-    )
-}
+const prevIcon = ({ size }) => {
+  return (
+    <svg
+      xmins="http://www.w3.org/2000/svg"
+      role="img"
+      height={size}
+      width={size}
+      className="Svg-sc-1bi12j5-0 jgfuCe IYDlXmBmmUKHveMzIPCF"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M15.957 2.793a1 1 0 010 1.414L8.164 12l7.793 7.793a1 1 0 11-1.414 1.414L5.336 12l9.207-9.207a1 1 0 011.414 0z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
 
-const ArrowRight = ({ size }) => {
-    return (
-        <svg xmins="http://www.w3.org/2000/svg" role="img" height={size} width={size} className="Svg-sc-1bi12j5-0 jgfuCe IYDlXmBmmUKHveMzIPCF" viewBox="0 0 24 24"><path d="M8.043 2.793a1 1 0 000 1.414L15.836 12l-7.793 7.793a1 1 0 101.414 1.414L18.664 12 9.457 2.793a1 1 0 00-1.414 0z" fill="currentColor" /></svg>
-    )
-}
+const nextIcon = ({ size }) => {
+  return (
+    <svg
+      xmins="http://www.w3.org/2000/svg"
+      role="img"
+      height={size}
+      width={size}
+      className="Svg-sc-1bi12j5-0 jgfuCe IYDlXmBmmUKHveMzIPCF"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M8.043 2.793a1 1 0 000 1.414L15.836 12l-7.793 7.793a1 1 0 101.414 1.414L18.664 12 9.457 2.793a1 1 0 00-1.414 0z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
 
 const Icon = ({ name, size = 24 }) => {
-    const icons = {
-        home: HomeIcon,
-        search: SearchIcon,
-        library: LibraryIcon,
-        arrowLeft: ArrowLeft,
-        arrowRight: ArrowRight
-    }
+  const icons = {
+    home: HomeIcon,
+    search: SearchIcon,
+    library: LibraryIcon,
+    prevIcon: prevIcon,
+    nextIcon: nextIcon,
+  };
 
-    const Component = icons[name];
-    return <Component size={size} />
-}
+  const Component = icons[name];
+  return <Component size={size} />;
+};
 
 export {
     Icon
