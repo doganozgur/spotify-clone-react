@@ -1,5 +1,6 @@
 // import { Icon } from "Icons";
 import { useNavigate } from "react-router-dom";
+import { Icon } from "../../../utils/Icons";
 
 function Navigation() {
   let navigate = useNavigate();
@@ -9,13 +10,13 @@ function Navigation() {
         onClick={() => navigate(-1)}
         className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-black"
       >
-        {/* <Icon name="prev" /> */}
+        <Icon name="prev" />
       </button>
       <button
         onClick={() => navigate(1)}
         className="text-link inline-flex items-center justify-center w-8 h-8 rounded-full bg-black opacity-40"
       >
-        {/* <Icon name="next" /> */}
+        <Icon name="next" />
       </button>
     </div>
   );

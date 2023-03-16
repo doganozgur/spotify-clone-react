@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Icon } from "../../utils/Icons";
 
 // import { Icon } from "Icons";
 
@@ -18,7 +19,9 @@ export default function Menu() {
               isActive ? activeClassName : notActiveClassname
             }
           >
-            <span>{/* <Icon name="home" /> */}</span>
+            <span>
+              <Icon name="home" />
+            </span>
             Ana sayfa
           </NavLink>
         </li>
@@ -29,7 +32,7 @@ export default function Menu() {
               isActive ? activeClassName : notActiveClassname
             }
           >
-            {/* <Icon name="search" /> */}
+            <Icon name="search" />
             Ara
           </NavLink>
         </li>
@@ -40,7 +43,7 @@ export default function Menu() {
               isActive ? activeClassName : notActiveClassname
             }
           >
-            {/* <Icon name="collection" /> */}
+            <Icon name="collection" />
             Kitaplığın
           </NavLink>
         </li>

@@ -1,4 +1,5 @@
 import { Menu } from "@headlessui/react";
+import { Icon } from "../../../utils/Icons";
 // import { Icon } from "Icons";
 
 function User() {
@@ -22,7 +23,7 @@ function User() {
             />
             <span className="mr-2 text-sm font-semibold">{user.name}</span>
             <span className={open ? "rotate-180" : undefined}>
-              {/* <Icon name="downDir" size={16} /> */}
+              <Icon name="downDir" size={16} />
             </span>
           </Menu.Button>
           <Menu.Items
@@ -39,7 +40,7 @@ function User() {
                   href="/#"
                 >
                   Account
-                  {/* <Icon name="external" size={16} /> */}
+                  <Icon name="external" size={16} />
                 </a>
               )}
             </Menu.Item>
