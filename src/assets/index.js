@@ -1,0 +1,17 @@
+export let playlist = [
+  { id: 0, title: "1. Çalma Listem" },
+  { id: 1, title: "1. Çalma Listem" },
+  { id: 2, title: "1. Çalma Listem" },
+  { id: 3, title: "1. Çalma Listem" },
+  { id: 4, title: "1. Çalma Listem" },
+  { id: 5, title: "1. Çalma Listem" },
+  { id: 6, title: "1. Çalma Listem" },
+  { id: 7, title: "1. Çalma Listem" },
+  { id: 8, title: "1. Çalma Listem" },
+  { id: 9, title: "1. Çalma Listem" },
+  { id: 10, title: "1. Çalma Listem" },
+  { id: 11, title: "1. Çalma Listem" },
+  { id: 12, title: "1. Çalma Listem" },
+  { id: 13, title: "1. Çalma Listem" },
+  { id: 14, title: "1. Çalma Listem" },
+];

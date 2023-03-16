@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply h-full bg-backdrop text-white;
+  }
+  #root {
+    @apply flex flex-col;
+  }
+  .wrapper {
+    height: calc(100% - theme("spacing.24"));
+    @apply flex;
+  }
+  .section-title {
+    @apply text-3xl font-bold mb-6;
+    font-size: 1.5rem;
+    letter-spacing: -0.04em;
+  }
+  .item-title {
+    @apply text-base font-bold leading-6;
+  }
+  .item-desc {
+    @apply leading-4 text-sm text-[#999999];
+  }
+}
