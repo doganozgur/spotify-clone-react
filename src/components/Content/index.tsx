@@ -1,21 +1,14 @@
-import { Routes, Route } from "react-router-dom";
-import Collection from "../../pages/Collection";
-import Home from "../../pages/Home";
-import Search from "../../pages/Search";
+import { Outlet } from "react-router-dom";
+
 import Navbar from "./Navbar";
 
-function Content() {
+export default function Content() {
   return (
     <main className="flex-1 overflow-auto">
       <Navbar />
       <div className="px-8 py-5">
-        <Routes>
-          <Route index path="/" element={<Home />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/collection" element={<Collection />} />
-        </Routes>
+        <Outlet />
       </div>
     </main>
   );
 }
-export default Content;

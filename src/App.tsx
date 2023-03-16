@@ -1,11 +1,11 @@
+import Content from "./components/Content";
 import Sidebar from "./components/Sidebar";
 
-function App() {
+export default function App() {
   return (
     <div className="wrapper">
       <Sidebar />
+      <Content />
     </div>
   );
 }
-
-export default App;
