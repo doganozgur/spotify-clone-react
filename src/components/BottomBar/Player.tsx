@@ -1,30 +1,40 @@
 import { useEffect, useMemo } from "react";
 import { useAudio } from "react-use";
-import { setControls } from "../../redux/playerSlice";
+import {
+  setControls,
+  setPlayerSidebar,
+  setPlaying,
+} from "../../redux/playerSlice";
 
-import { useAppSelector } from "../../utils/hooks";
+import { useAppDispatch, useAppSelector } from "../../utils/hooks";
 import { Icon } from "../../utils/Icons";
 import { secondsToTime } from "../../utils/secondsToTime";
 import CustomRange from "../CustomRange";
 
 export default function Player() {
-  const { current } = useAppSelector((state) => state.player);
+  const { current, playerSidebar } = useAppSelector((state) => state.player);
+  const dispatch = useAppDispatch();
+
   const [audio, state, controls] = useAudio({
-    src: current ? current.src! : "",
+    src: current?.src!,
   });
+  console.log(state);
+
+  useEffect(() => {
+    dispatch(setControls(controls));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    dispatch(setPlaying(state.playing));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.playing]);
 
   useEffect(() => {
     controls.play();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current]);
 
-  useEffect(() => {
-    setControls(controls);
-  }, [controls]);
-
-  /**
-   * Changing current icon of the volume. Whether it's muted, low, normal or full
-   * @returns {string} - Icon name
-   */
   const volumeIcon = useMemo(() => {
     if (state.volume === 0 || state.muted) return "volumeMuted";
     else if (state.volume > 0 && state.volume < 0.33) return "volumeLow";
@@ -35,7 +45,47 @@ export default function Player() {
   return (
     <div className="flex justify-between items-center h-full px-4">
       {/* Menu: Left */}
-      <div className="flex justify-start min-w-[11.25rem] w-[30%]">div sol</div>
+      <div className="flex justify-start min-w-[11.25rem] w-[30%]">
+        {current && (
+          <>
+            {/* Photo */}
+            <div className="flex items-center space-x-2 mr-4">
+              {!playerSidebar && (
+                <div className="relative w-14 group">
+                  <button
+                    onClick={() => dispatch(setPlayerSidebar())}
+                    className="absolute right-1 top-1 rotate-90 w-6 h-6 bg-black bg-opacity-40 rounded-full hover:bg-opacity-60 hidden group-hover:flex items-center justify-center hover:scale-[1.1]"
+                  >
+                    <Icon name="arrowLeft" size={16} />
+                  </button>
+                  <img
+                    className="w-full"
+                    src={current?.image}
+                    alt={current?.title}
+                  />
+                </div>
+              )}
+              <div>
+                <h6 className="text-sm font-normal line-clamp-1">
+                  {current?.title}
+                </h6>
+                <small className=" text-gray-400 text-xs">
+                  {current?.artist}
+                </small>
+              </div>
+            </div>
+            {/* Icons */}
+            <div className="flex items-center">
+              <button className="h-8 w-8 flex justify-center items-center text-white text-opacity-70 hover:text-opacity-100">
+                <Icon name="heart" size={16} />
+              </button>
+              <button className="h-8 w-8 flex justify-center items-center text-white text-opacity-70 hover:text-opacity-100">
+                <Icon name="pictureInPicture" size={16} />
+              </button>
+            </div>
+          </>
+        )}
+      </div>
       {/* Menu: Middle */}
       <div className="flex flex-col items-center max-w-[45.125rem] w-2/5">
         <div className="flex items-center">

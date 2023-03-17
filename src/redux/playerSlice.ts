@@ -3,15 +3,17 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 type StateTypes = {
-  isPlaying: boolean;
+  playing: boolean;
   current: null | TrackTypes;
   controls: null | AudioControls;
+  playerSidebar: boolean;
 };
 
 const initialState: StateTypes = {
-  isPlaying: false,
+  playing: false,
   current: null,
   controls: null,
+  playerSidebar: false,
 };
 
 export const playerSlice = createSlice({
@@ -19,18 +21,21 @@ export const playerSlice = createSlice({
   initialState,
   reducers: {
     setCurrent: (state, action: PayloadAction<TrackTypes>) => {
-      const { payload } = action;
-
-      state.current = payload;
-      state.isPlaying = !state.isPlaying;
+      state.current = action.payload;
+      state.playing = !state.playing;
     },
-    setControls: (state, action) => {
-      const { payload } = action;
-
-      state.controls = payload;
+    setControls: (state, action: PayloadAction<AudioControls>) => {
+      state.controls = action.payload;
+    },
+    setPlayerSidebar: (state) => {
+      state.playerSidebar = !state.playerSidebar;
+    },
+    setPlaying: (state, action) => {
+      state.playing = action.payload;
     },
   },
 });
 
-export const { setCurrent, setControls } = playerSlice.actions;
+export const { setCurrent, setControls, setPlayerSidebar, setPlaying } =
+  playerSlice.actions;
 export default playerSlice.reducer;

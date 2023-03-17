@@ -12,14 +12,9 @@ type Props = {
 export default function GridItem({ item }: Props) {
   const dispatch = useAppDispatch();
 
-  const { current } = useAppSelector((state) => state.player);
-
-  const { title, description, image, type } = item;
-
-  const updateCurrent = () => {
-    dispatch(setCurrent(item));
-  };
-
+  const { current, playing, controls } = useAppSelector(
+    (state) => state.player
+  );
   const imageStyle = (type: string) => {
     switch (type) {
       case "artist":
@@ -30,6 +25,22 @@ export default function GridItem({ item }: Props) {
         return "rounded-2xl";
       default:
         return type;
+    }
+  };
+
+  const { title, description, image, type } = item;
+
+  const isCurrentItem = current?.id === item.id && playing;
+
+  const updateCurrent = () => {
+    if (current?.id === item.id) {
+      if (playing) {
+        controls?.pause();
+      } else {
+        controls?.play();
+      }
+    } else {
+      dispatch(setCurrent(item));
     }
   };
 
@@ -53,9 +64,11 @@ export default function GridItem({ item }: Props) {
       </div>
       <button
         onClick={updateCurrent}
-        className="w-12 h-12 rounded-full bg-primary items-center justify-center absolute bottom-24 right-6 hidden group-hover:flex"
+        className={`w-12 h-12 rounded-full bg-primary items-center justify-center absolute bottom-24 right-6 group-hover:flex ${
+          !isCurrentItem ? "hidden" : "flex"
+        }`}
       >
-        <Icon size={16} name={current?.id === item.id ? "pause" : "play"} />
+        <Icon size={16} name={isCurrentItem ? "pause" : "play"} />
       </button>
     </NavLink>
   );
