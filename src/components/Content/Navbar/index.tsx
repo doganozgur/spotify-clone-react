@@ -3,7 +3,7 @@ import User from "./User";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center py-4 px-8">
+    <nav className="flex justify-between items-center pb-8">
       <Navigation />
       <User />
     </nav>
