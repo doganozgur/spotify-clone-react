@@ -5,9 +5,9 @@ import { Icon } from "../../utils/Icons";
 
 export default function Menu() {
   const notActiveClassname =
-    "h-10 px-6 flex gap-4 items-center text-link hover:text-white text-sm font-semibold transition duration-200";
+    "h-10 px-6 flex gap-4 items-center text-link hover:text-white text-sm font-semibold transition duration-200 mx-2 rounded-md";
   const activeClassName =
-    "h-10 px-6 flex gap-4 items-center text-white hover:text-white text-sm font-semibold transition duration-200";
+    "h-10 px-6 flex gap-4 items-center text-white hover:text-white text-sm font-semibold transition duration-200 bg-active mx-2 rounded-md";
 
   return (
     <nav>

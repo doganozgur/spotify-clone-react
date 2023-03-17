@@ -482,7 +482,7 @@ const LikedSongs = ({ size }: any) => {
   );
 };
 
-export const Icon = ({ name, size = 16 }: Props) => {
+export const Icon = ({ name, size = 22 }: Props) => {
   const icons: any = {
     home: HomeIcon,
     search: SearchIcon,

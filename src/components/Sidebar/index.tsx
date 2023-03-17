@@ -10,7 +10,7 @@ export default function Sidebar() {
   return (
     <aside className="flex flex-col flex-shrink-0 w-60 py-6 bg-black">
       {/* Logo */}
-      <Logo className="h-10 mb-6 px-6" />
+      <Logo className="h-10 mb-6 px-6 mr-auto" />
       <Menu />
       <Link
         to="/"
