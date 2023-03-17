@@ -2,13 +2,23 @@ import { NavLink } from "react-router-dom";
 
 import { Icon } from "../utils/Icons";
 import { TrackTypes } from "../utils/types";
+import { setCurrent } from "../redux/playerSlice";
+import { useAppDispatch, useAppSelector } from "../utils/hooks";
 
 type Props = {
-  data: TrackTypes;
+  item: TrackTypes;
 };
 
-export default function GridItem({ data }: Props) {
-  const { title, description, image, type } = data;
+export default function GridItem({ item }: Props) {
+  const dispatch = useAppDispatch();
+
+  const { current } = useAppSelector((state) => state.player);
+
+  const { title, description, image, type } = item;
+
+  const updateCurrent = () => {
+    dispatch(setCurrent(item));
+  };
 
   const imageStyle = (type: string) => {
     switch (type) {
@@ -41,8 +51,11 @@ export default function GridItem({ data }: Props) {
         </h4>
         <p className="item-desc line-clamp-2">{description}</p>
       </div>
-      <button className="w-12 h-12 rounded-full bg-primary items-center justify-center absolute bottom-24 right-6 hidden group-hover:flex">
-        <Icon size={16} name="play" />
+      <button
+        onClick={updateCurrent}
+        className="w-12 h-12 rounded-full bg-primary items-center justify-center absolute bottom-24 right-6 hidden group-hover:flex"
+      >
+        <Icon size={16} name={current?.id === item.id ? "pause" : "play"} />
       </button>
     </NavLink>
   );

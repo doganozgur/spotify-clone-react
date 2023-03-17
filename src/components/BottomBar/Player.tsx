@@ -1,14 +1,25 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useAudio } from "react-use";
+import { setControls } from "../../redux/playerSlice";
 
+import { useAppSelector } from "../../utils/hooks";
 import { Icon } from "../../utils/Icons";
 import { secondsToTime } from "../../utils/secondsToTime";
 import CustomRange from "../CustomRange";
 
 export default function Player() {
+  const { current } = useAppSelector((state) => state.player);
   const [audio, state, controls] = useAudio({
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    src: current ? current.src! : "",
   });
+
+  useEffect(() => {
+    controls.play();
+  }, [current]);
+
+  useEffect(() => {
+    setControls(controls);
+  }, [controls]);
 
   /**
    * Changing current icon of the volume. Whether it's muted, low, normal or full

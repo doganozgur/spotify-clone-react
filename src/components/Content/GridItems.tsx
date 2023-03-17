@@ -25,7 +25,7 @@ export default function GridItems({ data, title, more = true }: Props) {
       </div>
       <div className="grid grid-cols-7 gap-4">
         {data.map((info: TrackTypes) => (
-          <GridItem key={info.id} data={info} />
+          <GridItem key={info.id} item={info} />
         ))}
       </div>
     </section>
