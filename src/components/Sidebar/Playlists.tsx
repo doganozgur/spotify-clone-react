@@ -1,4 +1,4 @@
-import { playlist } from "../../assets/index";
+import { playlist } from "../../assets/data/playlist";
 
 export default function Playlists() {
   return (

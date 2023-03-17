@@ -1,4 +1,3 @@
-type Props = {};
-export default function Collection({}: Props) {
+export default function Collection() {
   return <div>Collection</div>;
 }

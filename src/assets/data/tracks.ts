@@ -1,4 +1,4 @@
-export default [
+export const tracks_data = [
   {
     id: 1,
     title: "Intouchables - Soundtracks OST",
@@ -43,5 +43,23 @@ export default [
     image: "https://i.scdn.co/image/ab67706c0000da84fcb8b92f2615d3261b8eb146",
     type: "album",
     src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+  },
+  {
+    id: 6,
+    title: "Hang Massive",
+    artist: "Mert Abi",
+    description: "Artist",
+    image: "https://i.scdn.co/image/ab67616100005174802686196d39eb0b7b5cd8b1",
+    type: "artist",
+    src: "https://freesound.org/data/previews/612/612087_1648170-lq.mp3",
+  },
+  {
+    id: 7,
+    title: "Peaceful Piano",
+    artist: "Murat Abi",
+    description: "Relax and indulge with beautiful piano pieces",
+    image: "https://i.scdn.co/image/ab67706f00000002ca5a7517156021292e5663a6",
+    type: "album",
+    src: "https://freesound.org/data/previews/612/612092_7037-lq.mp3",
   },
 ];

@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar";
 import BottomBar from "./components/BottomBar";
-import Navbar from "./components/Content/Navbar";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (

@@ -36,7 +36,7 @@ export default function Player() {
           <button className="h-8 w-8 flex justify-center items-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon name="playerPrev" size={16} />
           </button>
-          {/* Button: Pause */}
+          {/* Button: Play/Pause */}
           <button
             onClick={controls[state?.playing ? "pause" : "play"]}
             className="h-8 w-8 flex justify-center items-center bg-white rounded-full text-black hover:scale-[1.06] transition ease-in-out delay-75"

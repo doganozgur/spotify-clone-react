@@ -1,7 +1,9 @@
 export type TrackTypes = {
   id: number;
   title: string;
-  desc: string;
-  img: string;
+  description: string;
+  artist: string;
+  image: string;
   type: string;
+  src: string;
 };

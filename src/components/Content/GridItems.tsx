@@ -9,7 +9,7 @@ type Props = {
   more?: boolean;
 };
 
-function GridItems({ data, title, more = true }: Props) {
+export default function GridItems({ data, title, more = true }: Props) {
   return (
     <section>
       <div className="flex justify-between items-center">
@@ -31,4 +31,3 @@ function GridItems({ data, title, more = true }: Props) {
     </section>
   );
 }
-export default GridItems;

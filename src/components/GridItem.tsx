@@ -7,12 +7,9 @@ type Props = {
   data: TrackTypes;
 };
 
-function GridItem({ data }: Props) {
-  /**
-   * Decides border radius of the images
-   * @param {string} type
-   * @returns {string} Classname for border radius
-   */
+export default function GridItem({ data }: Props) {
+  const { title, description, image, type } = data;
+
   const imageStyle = (type: string) => {
     switch (type) {
       case "artist":
@@ -33,16 +30,16 @@ function GridItem({ data }: Props) {
     >
       {
         <img
-          src={data.img}
-          alt={data.title}
-          className={`mb-4 object-cover w-full h-full ${imageStyle(data.type)}`}
+          src={image}
+          alt={title}
+          className={`mb-4 object-cover w-22 h-22 ${imageStyle(type)}`}
         />
       }
       <div className="h-16">
         <h4 className="item-title overflow-hidden overflow-ellipsis whitespace-nowrap">
-          {data.title}
+          {title}
         </h4>
-        <p className="item-desc line-clamp-2">{data.desc}</p>
+        <p className="item-desc line-clamp-2">{description}</p>
       </div>
       <button className="w-12 h-12 rounded-full bg-primary items-center justify-center absolute bottom-24 right-6 hidden group-hover:flex">
         <Icon size={16} name="play" />
@@ -50,5 +47,3 @@ function GridItem({ data }: Props) {
     </NavLink>
   );
 }
-
-export default GridItem;

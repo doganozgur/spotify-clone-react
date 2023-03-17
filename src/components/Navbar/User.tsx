@@ -1,8 +1,7 @@
 import { Menu } from "@headlessui/react";
-import { Icon } from "../../../utils/Icons";
-// import { Icon } from "Icons";
+import { Icon } from "../../utils/Icons";
 
-function User() {
+export default function User() {
   const user = {
     name: "Doğan Özgür",
     avatar: "https://avatars.githubusercontent.com/u/47204631?v=4",
@@ -74,5 +73,3 @@ function User() {
     </Menu>
   );
 }
-
-export default User;

@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Collection from "./pages/Collection";
 import NotFound from "./pages/NotFound";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );

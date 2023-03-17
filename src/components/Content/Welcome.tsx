@@ -1,6 +1,6 @@
-import { welcome_data } from "../../assets/welcome/index";
+import { welcome_data } from "../../assets/data/welcome";
 
-function Welcome() {
+export default function Welcome() {
   return (
     <section>
       <h2 className="section-title">Good evening</h2>
@@ -26,4 +26,3 @@ function Welcome() {
     </section>
   );
 }
-export default Welcome;
