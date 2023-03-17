@@ -92,16 +92,16 @@ export default function Player() {
             <Icon name={volumeIcon} size={16} />
           </button>
           {/* Volume bar */}
-          {/* <CustomRange
+          <CustomRange
             step={0.01}
             min={0}
             max={1}
-            value={state.muted ? 0 : state?.volume}
+            value={[state.muted ? 0 : state?.volume]}
             onChange={(value) => {
               controls.unmute();
               controls.volume(value);
             }}
-          /> */}
+          />
           {/* Button: Full screen */}
           <button className="h-8 w-8 flex justify-center items-center text-white text-opacity-70 hover:text-opacity-100">
             <Icon name="fullScreen" size={16} />

@@ -35,7 +35,7 @@ const CustomRange: React.FC<Props> = ({ value, step, min, max, onChange }) => {
               borderRadius: "4px",
               background: getTrackBackground({
                 values: value,
-                colors: ["#fff", "hsla(0,0%,100%,.3)"],
+                colors: ["#1db954", "hsla(0,0%,100%,.3)"],
                 min,
                 max,
               }),
