@@ -32,7 +32,7 @@ export default function GridItems({ data, title, more = true }: Props) {
 
   return (
     <section>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mb-6">
         <h2 className="section-title">{title}</h2>
         {more && (
           <NavLink

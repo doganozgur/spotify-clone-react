@@ -12,12 +12,11 @@
     @apply flex flex-col;
   }
   .wrapper {
-    height: calc(100% - theme("spacing.24"));
     @apply flex;
+    height: calc(100% - theme("spacing.20"));
   }
   .section-title {
-    @apply text-3xl font-bold mb-6;
-    font-size: 1.5rem;
+    @apply text-xl sm:text-3xl font-bold;
     letter-spacing: -0.04em;
   }
   .item-title {
@@ -25,5 +24,10 @@
   }
   .item-desc {
     @apply leading-4 text-sm text-[#999999];
+  }
+}
+@media screen and (min-width: theme("screens.lg")) {
+  .wrapper {
+    height: calc(100% - theme("spacing.24"));
   }
 }

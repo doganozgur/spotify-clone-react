@@ -1,15 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { Icon } from "../../utils/Icons";
+import { Icon } from "../utils/Icons";
 
-export default function Menu() {
+export default function MobileNavbar() {
   const notActiveClassname =
-    "h-10 px-4 flex gap-4 items-center text-link hover:text-white text-sm font-semibold transition duration-200 mx-2 rounded-md";
+    "px-2 flex flex-col gap-2 items-center text-link hover:text-white text-xs transition duration-200 rounded-md";
   const activeClassName =
-    "h-10 px-4 flex gap-4 items-center text-white hover:text-white text-sm font-semibold transition duration-200 bg-active mx-2 rounded-md";
-
+    "px-2 flex flex-col gap-2 items-center text-white hover:text-white text-xs transition duration-200 rounded-md";
   return (
     <nav>
-      <ul className="flex flex-col">
+      <ul className="flex justify-around items-center h-20 py-4">
         <li>
           <NavLink
             to="/"
@@ -43,6 +42,17 @@ export default function Menu() {
           >
             <Icon name="collection" />
             Kitaplığın
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="downloadApp"
+            className={({ isActive }) =>
+              isActive ? activeClassName : notActiveClassname
+            }
+          >
+            <Icon name="spotifyIcon" size={24} />
+            Uygulamayı Edin
           </NavLink>
         </li>
       </ul>
