@@ -4,7 +4,6 @@ import { useAudio } from "react-use";
 import { useAppDispatch, useAppSelector } from "../hooks/useAppStore";
 import { setControls, setPlaying } from "../redux/playerSlice";
 import { Icon } from "../utils/Icons";
-import CustomRange from "./CustomRange";
 
 export default function MobilePlayer() {
   const { current } = useAppSelector((state) => state.player);
