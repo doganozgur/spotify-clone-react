@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { useAppSelector } from "../../utils/hooks";
+import { useAppSelector } from "../../hooks/useAppStore";
 import { Icon } from "../../utils/Icons";
 import CurrentTrackCover from "./CurrentTrackCover";
 import DownloadButton from "./DownloadButton";

@@ -6,7 +6,7 @@ import {
   setPlaying,
 } from "../../redux/playerSlice";
 
-import { useAppDispatch, useAppSelector } from "../../utils/hooks";
+import { useAppDispatch, useAppSelector } from "../../hooks/useAppStore";
 import { Icon } from "../../utils/Icons";
 import { secondsToTime } from "../../utils/secondsToTime";
 import CustomRange from "../CustomRange";
@@ -18,7 +18,6 @@ export default function Player() {
   const [audio, state, controls] = useAudio({
     src: current?.src!,
   });
-  console.log(state);
 
   useEffect(() => {
     dispatch(setControls(controls));

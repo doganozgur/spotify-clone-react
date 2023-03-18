@@ -1,6 +1,6 @@
 import { tracks_data } from "../assets/data/tracks";
-import GridItems from "../components/Content/GridItems";
-import Welcome from "../components/Content/Welcome";
+import GridItems from "../components/GridItems";
+import Welcome from "../components/Welcome";
 
 export default function Home() {
   return (

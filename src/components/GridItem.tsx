@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Icon } from "../utils/Icons";
 import { TrackTypes } from "../utils/types";
 import { setCurrent } from "../redux/playerSlice";
-import { useAppDispatch, useAppSelector } from "../utils/hooks";
+import { useAppDispatch, useAppSelector } from "../hooks/useAppStore";
 
 type Props = {
   item: TrackTypes;

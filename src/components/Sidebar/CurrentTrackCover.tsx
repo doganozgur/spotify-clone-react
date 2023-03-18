@@ -1,5 +1,5 @@
 import { setPlayerSidebar } from "../../redux/playerSlice";
-import { useAppDispatch, useAppSelector } from "../../utils/hooks";
+import { useAppDispatch, useAppSelector } from "../../hooks/useAppStore";
 import { Icon } from "../../utils/Icons";
 
 export default function CurrentTrackCover() {
