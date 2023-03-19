@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar";
 import BottomBar from "./components/BottomBar";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Header";
 import useScreenWidth from "./hooks/useScreenWidth";
 import MobileNavbar from "./components/MobileNavbar";
 
@@ -13,7 +13,7 @@ export default function App() {
     <>
       <div className="wrapper">
         {screenWidth > 768 && <Sidebar />}
-        <div className="flex-1 overflow-auto px-8 py-6">
+        <div className="flex-1 overflow-auto px-8">
           <Navbar />
           <Outlet />
         </div>

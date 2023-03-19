@@ -30,7 +30,7 @@ export default function Menu() {
               isActive ? activeClassName : notActiveClassname
             }
           >
-            <Icon name="search" />
+            <Icon name="searchLight" />
             Ara
           </NavLink>
         </li>

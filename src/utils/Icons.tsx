@@ -35,19 +35,35 @@ const HomeIcon = ({ size }: any) => {
   );
 };
 
-const SearchIcon = ({ size }: any) => {
+const SearchDark = ({ size }: any) => {
   return (
     <svg
-      viewBox="0 0 512 512"
-      width={size}
+      role="img"
       height={size}
-      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      data-encore-id="icon"
+    >
+      <path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path>
+    </svg>
+  );
+};
+
+const SearchLight = ({ size }: any) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      data-encore-id="icon"
     >
       <path
-        d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+        d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"
         fill="currentColor"
-        fillRule="evenodd"
-      />
+      ></path>
     </svg>
   );
 };
@@ -497,10 +513,26 @@ const SpotifyIcon = ({ size }: any) => {
   );
 };
 
+const TimesIcon = ({ size }: any) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      data-encore-id="icon"
+    >
+      <path d="M3.293 3.293a1 1 0 0 1 1.414 0L12 10.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 12l7.293 7.293a1 1 0 0 1-1.414 1.414L12 13.414l-7.293 7.293a1 1 0 0 1-1.414-1.414L10.586 12 3.293 4.707a1 1 0 0 1 0-1.414z"></path>
+    </svg>
+  );
+};
+
 export const Icon = ({ name, size = 22 }: Props) => {
   const icons: any = {
     home: HomeIcon,
-    search: SearchIcon,
+    searchDark: SearchDark,
+    searchLight: SearchLight,
     collection: CollectionIcon,
     plus: PlusIcon,
     heart: HeartIcon,
@@ -531,6 +563,7 @@ export const Icon = ({ name, size = 22 }: Props) => {
     createPlaylists: CreatePlaylist,
     likedSongs: LikedSongs,
     spotifyIcon: SpotifyIcon,
+    times: TimesIcon,
   };
 
   const Component = icons[name];

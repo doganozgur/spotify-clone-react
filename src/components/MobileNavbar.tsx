@@ -33,7 +33,7 @@ export default function MobileNavbar() {
               isActive ? activeClassName : notActiveClassname
             }
           >
-            <Icon name="search" />
+            <Icon name="searchLight" />
             Ara
           </NavLink>
         </li>
