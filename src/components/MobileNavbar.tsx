@@ -1,13 +1,17 @@
 import { NavLink } from "react-router-dom";
+import useScreenWidth from "../hooks/useScreenWidth";
 import { Icon } from "../utils/Icons";
+import MobilePlayer from "./MobilePlayer";
 
 export default function MobileNavbar() {
+  const screenWidth = useScreenWidth();
+
   const notActiveClassname =
     "px-2 flex flex-col gap-2 items-center text-link hover:text-white text-xs transition duration-200 rounded-md";
   const activeClassName =
     "px-2 flex flex-col gap-2 items-center text-white hover:text-white text-xs transition duration-200 rounded-md";
   return (
-    <nav>
+    <nav className="relative">
       <ul className="flex justify-around items-center h-20 py-4">
         <li>
           <NavLink
@@ -56,6 +60,7 @@ export default function MobileNavbar() {
           </NavLink>
         </li>
       </ul>
+      {screenWidth < 768 && <MobilePlayer />}
     </nav>
   );
 }

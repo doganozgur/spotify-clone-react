@@ -31,7 +31,7 @@ export default function MobilePlayer() {
   return (
     <>
       {current && (
-        <div className="flex justify-between items-center bg-[#77776b] p-2 h-14 rounded-md m-2">
+        <div className="flex justify-between items-center bg-[#77776b] p-2 h-14 rounded-md m-2 absolute bottom-full left-0 right-0">
           {/* Track Info */}
           <div className="flex gap-4">
             <img className="h-10" src={current?.image} alt={current?.title} />
