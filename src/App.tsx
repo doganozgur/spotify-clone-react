@@ -19,7 +19,7 @@ export default function App() {
         </div>
       </div>
       {screenWidth > 768 && <BottomBar />}
-      {screenWidth < 768 && <MobileNavbar />}
+      {screenWidth <= 768 && <MobileNavbar />}
     </>
   );
 }

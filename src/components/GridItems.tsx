@@ -17,13 +17,13 @@ export default function GridItems({ data, title, more = true }: Props) {
   const screenWidth = useScreenWidth();
 
   useEffect(() => {
-    if (screenWidth < 640) {
+    if (screenWidth <= 640) {
       setItemsToRender(2);
-    } else if (screenWidth < 768) {
+    } else if (screenWidth <= 768) {
       setItemsToRender(3);
-    } else if (screenWidth < 1024) {
+    } else if (screenWidth <= 1024) {
       setItemsToRender(4);
-    } else if (screenWidth < 1280) {
+    } else if (screenWidth <= 1280) {
       setItemsToRender(6);
     } else {
       setItemsToRender(7);

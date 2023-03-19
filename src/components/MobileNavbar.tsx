@@ -60,7 +60,7 @@ export default function MobileNavbar() {
           </NavLink>
         </li>
       </ul>
-      {screenWidth < 768 && <MobilePlayer />}
+      {screenWidth <= 768 && <MobilePlayer />}
     </nav>
   );
 }

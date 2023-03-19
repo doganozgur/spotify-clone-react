@@ -12,9 +12,9 @@ export default function Header() {
 
   return (
     <header className="flex justify-between items-center gap-4 mt-4 sm:pb-8 mb-4">
-      {screenWidth > 768 && <Navigation />}
+      {screenWidth >= 768 && <Navigation />}
       {isSearchPage && <SearchBar />}
-      {screenWidth > 768 && <User />}
+      {screenWidth >= 768 && <User />}
     </header>
   );
 }
