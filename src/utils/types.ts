@@ -16,3 +16,10 @@ export interface AudioControls {
   volume: (volume: number) => void;
   seek: (time: number) => void;
 }
+
+export type BrowseItemType = {
+  id: number;
+  title: string;
+  image: string;
+  bgColor: string;
+};
