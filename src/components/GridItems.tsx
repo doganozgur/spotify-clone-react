@@ -23,10 +23,8 @@ export default function GridItems({ data, title, more = true }: Props) {
       setItemsToRender(3);
     } else if (screenWidth <= 1024) {
       setItemsToRender(4);
-    } else if (screenWidth <= 1280) {
-      setItemsToRender(6);
     } else {
-      setItemsToRender(7);
+      setItemsToRender(6);
     }
   }, [screenWidth]);
 
@@ -43,10 +41,13 @@ export default function GridItems({ data, title, more = true }: Props) {
           </NavLink>
         )}
       </div>
-      <div className="grid xl:grid-cols-7 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4">
-        {data.slice(0, itemsToRender).map((info: TrackTypes) => (
-          <GridItem key={info.id} item={info} />
-        ))}
+      <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4">
+        {data
+          .slice(0, itemsToRender)
+          .sort(() => Math.random() - 0.5)
+          .map((item: TrackTypes) => (
+            <GridItem key={item.id} item={item} />
+          ))}
       </div>
     </section>
   );

@@ -15,8 +15,8 @@ export default function Home() {
         </button>
       )}
       <Welcome />
-      <GridItems title="Recently Played" data={tracks_data} />
-      <GridItems title="Made For Doğan Özgür" data={tracks_data} />
+      <GridItems title="Recently played" data={tracks_data} />
+      <GridItems title="Made for you" data={tracks_data} />
     </div>
   );
 }

@@ -6,7 +6,7 @@ export const collection_data = [
     artist: "Patrick Bateman",
     image: "https://i.scdn.co/image/ab67706c0000da847e17cbc31edd95829d39344e",
     type: "",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/Ee0d3ddcf37fb69879e54e03fd2079dc2",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const collection_data = [
     artist: "Rihanna",
     image: "https://i.scdn.co/image/ab67706f00000002128217f6ecc1036a29759168",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/AAcSDC5g3rBFC3QBO",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const collection_data = [
     artist: "Study",
     image: "https://i.scdn.co/image/ab67706c0000da84891a5f4520d2269bdd0c6ce9",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/XxYiWak2YqHkhvBFp",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ export const collection_data = [
     artist: "Mabel Matiz",
     image: "https://i.scdn.co/image/ab67706f000000024da4d70bcde12fe2da988ea5",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/VV001Lu3zdw",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ export const collection_data = [
     artist: "Queen",
     image: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0ENBD2-default.jpg",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/EeXxfALlvnzlPypWq",
   },
   {
     id: 7,
@@ -52,7 +52,7 @@ export const collection_data = [
     artist: "Ediz",
     image: "https://i.scdn.co/image/ab67706f00000002f7f7c0588eef43ee5f8ae7c6",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/VV001Lu3zdw",
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const collection_data = [
     artist: "Patrick Bateman",
     image: "https://i.scdn.co/image/ab67706c0000da847e17cbc31edd95829d39344e",
     type: "",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/Ee0d3ddcf37fb69879e54e03fd2079dc2",
   },
   {
     id: 9,
@@ -70,7 +70,7 @@ export const collection_data = [
     artist: "Rihanna",
     image: "https://i.scdn.co/image/ab67706f00000002128217f6ecc1036a29759168",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/AAcSDC5g3rBFC3QBO",
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ export const collection_data = [
     artist: "Study",
     image: "https://i.scdn.co/image/ab67706c0000da84891a5f4520d2269bdd0c6ce9",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/XxYiWak2YqHkhvBFp",
   },
   {
     id: 11,
@@ -89,7 +89,7 @@ export const collection_data = [
     artist: "Mabel Matiz",
     image: "https://i.scdn.co/image/ab67706f000000024da4d70bcde12fe2da988ea5",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/VV001Lu3zdw",
   },
   {
     id: 12,
@@ -98,7 +98,7 @@ export const collection_data = [
     artist: "Queen",
     image: "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0ENBD2-default.jpg",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/EeXxfALlvnzlPypWq",
   },
   {
     id: 13,
@@ -107,6 +107,6 @@ export const collection_data = [
     artist: "Ediz",
     image: "https://i.scdn.co/image/ab67706f00000002f7f7c0588eef43ee5f8ae7c6",
     type: "album",
-    src: "https://freesound.org/data/previews/612/612095_5674468-lq.mp3",
+    src: "https://mobcup.net/va/VV001Lu3zdw",
   },
 ];
