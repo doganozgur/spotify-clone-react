@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 import { Icon } from "../utils/Icons";
 import { TrackTypes } from "../utils/types";
 import { setCurrent } from "../redux/playerSlice";
