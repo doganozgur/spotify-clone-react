@@ -45,10 +45,7 @@ export default function GridItem({ item }: Props) {
   };
 
   return (
-    <NavLink
-      to="/"
-      className="flex flex-col bg-darkGray p-4 rounded-md hover:bg-active transition duration-300 ease cursor-pointer relative group"
-    >
+    <article className="flex flex-col bg-darkGray p-4 rounded-md hover:bg-active transition duration-300 ease cursor-pointer relative group">
       {
         <img
           src={image}
@@ -70,6 +67,6 @@ export default function GridItem({ item }: Props) {
       >
         <Icon size={16} name={isCurrentItem ? "pause" : "play"} />
       </button>
-    </NavLink>
+    </article>
   );
 }
