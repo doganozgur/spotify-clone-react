@@ -1,3 +1,7 @@
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
+import { welcome_data } from "../assets/data/welcome";
 import { tracks_data } from "../assets/data/tracks";
 import GridItems from "../components/GridItems";
 import Welcome from "../components/Welcome";
@@ -14,9 +18,31 @@ export default function Home() {
           <Icon name="gear" />
         </button>
       )}
-      <Welcome />
-      <GridItems title="Recently played" data={tracks_data} />
-      <GridItems title="Made for you" data={tracks_data} />
+      {/* Welcome */}
+      {welcome_data ? (
+        <Welcome data={welcome_data} />
+      ) : (
+        <Skeleton
+          count={2}
+          baseColor="#121212"
+          highlightColor="#939393"
+          height={80}
+        />
+      )}
+      {/* Recently Played */}
+      {tracks_data ? (
+        <>
+          <GridItems title="Recently played" data={tracks_data} />
+          <GridItems title="Made for you" data={tracks_data} />
+        </>
+      ) : (
+        <Skeleton
+          count={1}
+          baseColor="#121212"
+          highlightColor="#939393"
+          height={300}
+        />
+      )}
     </div>
   );
 }

@@ -1,9 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-
-// import Swiper core and required modules
+import { useEffect, useState } from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles

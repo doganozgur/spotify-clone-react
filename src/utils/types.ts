@@ -31,3 +31,9 @@ export type CollectionItemType = {
   image: string;
   src: string;
 };
+
+export type WelcomeItemType = {
+  id: number;
+  title: string;
+  img: string;
+};
