@@ -23,3 +23,11 @@ export type BrowseItemType = {
   image: string;
   bgColor: string;
 };
+
+export type CollectionItemType = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  src: string;
+};
