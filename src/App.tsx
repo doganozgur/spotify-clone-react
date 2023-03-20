@@ -13,7 +13,7 @@ export default function App() {
     <>
       <div className="wrapper">
         {screenWidth > 768 && <Sidebar />}
-        <div className="flex-1 overflow-auto sm:px-8 px-4">
+        <div className="flex-1 overflow-auto sm:px-8 px-4 pb-4">
           <Header />
           <Outlet />
         </div>
