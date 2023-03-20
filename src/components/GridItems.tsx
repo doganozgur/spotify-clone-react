@@ -1,5 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/scrollbar";
 
 import GridItem from "./GridItem";
 import { TrackTypes } from "../utils/types";
@@ -21,7 +30,7 @@ export default function GridItems({ data, title, more = true }: Props) {
       setItemsToRender(2);
     } else if (screenWidth <= 768) {
       setItemsToRender(3);
-    } else if (screenWidth <= 1024) {
+    } else if (screenWidth < 1024) {
       setItemsToRender(4);
     } else {
       setItemsToRender(6);
@@ -41,14 +50,31 @@ export default function GridItems({ data, title, more = true }: Props) {
           </NavLink>
         )}
       </div>
-      <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4">
-        {data
-          .slice(0, itemsToRender)
-          .sort(() => Math.random() - 0.5)
-          .map((item: TrackTypes) => (
-            <GridItem key={item.id} item={item} />
-          ))}
-      </div>
+      {screenWidth > 768 ? (
+        <div className="grid lg:grid-cols-6 md:grid-cols-4 gap-4">
+          {data
+            .slice(0, itemsToRender)
+            .sort(() => Math.random() - 0.5)
+            .map((item: TrackTypes) => (
+              <GridItem key={item.id} item={item} />
+            ))}
+        </div>
+      ) : (
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={15}
+          slidesPerView={2}
+          scrollbar={{ draggable: true }}
+        >
+          {data
+            .sort(() => Math.random() - 0.5)
+            .map((item: TrackTypes) => (
+              <SwiperSlide key={item.id}>
+                <GridItem key={item.id} item={item} />
+              </SwiperSlide>
+            ))}
+        </Swiper>
+      )}
     </section>
   );
 }
