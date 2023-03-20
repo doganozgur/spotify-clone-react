@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import useScreenWidth from "../hooks/useScreenWidth";
-import { Icon } from "../utils/Icons";
-import MobilePlayer from "./MobilePlayer";
+import useScreenWidth from "../../hooks/useScreenWidth";
+import { Icon } from "../../utils/Icons";
+import MobilePlayer from "../MobilePlayer";
 
 export default function MobileNavbar() {
   const screenWidth = useScreenWidth();
@@ -50,7 +50,7 @@ export default function MobileNavbar() {
         </li>
         <li>
           <NavLink
-            to="downloadApp"
+            to="download"
             className={({ isActive }) =>
               isActive ? activeClassName : notActiveClassname
             }

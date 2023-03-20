@@ -215,7 +215,7 @@ const PlayIcon = ({ size }: any) => {
   );
 };
 
-const ArrowLeftIcon = ({ size }: any) => {
+const ChevronLeft = ({ size }: any) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -527,6 +527,21 @@ const TimesIcon = ({ size }: any) => {
     </svg>
   );
 };
+const ArrowLeft = ({ size }: any) => {
+  return (
+    <svg
+      role="img"
+      height={size}
+      width={size}
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      data-encore-id="icon"
+      fill="currentColor"
+    >
+      <path d="M13.414 3.5a.999.999 0 0 0-1.707-.707l-9.207 9.2 9.207 9.202a1 1 0 1 0 1.414-1.413L6.335 13H20.5a1 1 0 0 0 0-2H6.322l6.799-6.794a.999.999 0 0 0 .293-.707z"></path>
+    </svg>
+  );
+};
 
 const GearIcon = ({ size }: any) => {
   return (
@@ -576,13 +591,14 @@ export const Icon = ({ name, size = 22 }: Props) => {
     volumeNormal: VolumeNormalIcon,
     volumeFull: VolumeFullIcon,
     lyrics: LyricsIcon,
-    arrowLeft: ArrowLeftIcon,
+    chevronLeft: ChevronLeft,
     logo: LogoIcon,
     createPlaylists: CreatePlaylist,
     likedSongs: LikedSongs,
     spotifyIcon: SpotifyIcon,
     times: TimesIcon,
     gear: GearIcon,
+    arrowLeft: ArrowLeft,
   };
 
   const Component = icons[name];

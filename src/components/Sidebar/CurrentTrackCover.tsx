@@ -17,7 +17,7 @@ export default function CurrentTrackCover() {
         onClick={() => dispatch(setPlayerSidebar())}
         className="absolute right-1 top-1 -rotate-90 w-6 h-6 hover:scale-[1.1] bg-black bg-opacity-40 rounded-full flex items-center justify-center hover:bg-opacity-60"
       >
-        <Icon name="arrowLeft" size={16} />
+        <Icon name="chevronLeft" size={16} />
       </button>
     </div>
   );

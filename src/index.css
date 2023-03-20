@@ -25,6 +25,10 @@
   .item-desc {
     @apply leading-4 text-sm text-[#999999];
   }
+
+  .button-primary {
+    @apply bg-primary rounded-full text-black px-8 py-2 font-semibold text-[1rem] min-h-[40px];
+  }
 }
 @media screen and (min-width: theme("screens.lg")) {
   .wrapper {

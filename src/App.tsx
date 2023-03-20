@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 import BottomBar from "./components/BottomBar";
 import Header from "./components/Header";
 import useScreenWidth from "./hooks/useScreenWidth";
-import MobileNavbar from "./components/MobileNavbar";
+import MobileNavbar from "./components/Header/MobileNavbar";
 
 export default function App() {
   const screenWidth = useScreenWidth();

@@ -1,9 +1,10 @@
-// import { Icon } from "Icons";
 import { useNavigate } from "react-router-dom";
+
 import { Icon } from "../../utils/Icons";
 
 export default function Navigation() {
   let navigate = useNavigate();
+
   return (
     <div className="flex items-center gap-x-4">
       <button

@@ -10,6 +10,7 @@ import Collection from "./pages/Collection";
 import NotFound from "./pages/NotFound";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import Download from "./pages/Download";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/collection",
         element: <Collection />,
+      },
+      {
+        path: "/download",
+        element: <Download />,
       },
       { path: "*", element: <NotFound /> },
     ],

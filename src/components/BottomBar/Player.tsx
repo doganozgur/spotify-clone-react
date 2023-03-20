@@ -55,7 +55,7 @@ export default function Player() {
                     onClick={() => dispatch(setPlayerSidebar())}
                     className="absolute right-1 top-1 rotate-90 w-6 h-6 bg-black bg-opacity-40 rounded-full hover:bg-opacity-60 hidden group-hover:flex items-center justify-center hover:scale-[1.1]"
                   >
-                    <Icon name="arrowLeft" size={16} />
+                    <Icon name="chevronLeft" size={16} />
                   </button>
                   <img
                     className="w-full"
