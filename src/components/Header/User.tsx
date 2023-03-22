@@ -38,7 +38,7 @@ export default function User() {
                   }`}
                   href="/#"
                 >
-                  Account
+                  Hesap
                   <Icon name="external" size={16} />
                 </a>
               )}
@@ -51,7 +51,7 @@ export default function User() {
                   }`}
                   href="/#"
                 >
-                  Profile
+                  Profil
                 </a>
               )}
             </Menu.Item>
@@ -63,7 +63,7 @@ export default function User() {
                   }`}
                   href="/#"
                 >
-                  Logout
+                  Çıkış
                 </a>
               )}
             </Menu.Item>

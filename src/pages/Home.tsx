@@ -32,8 +32,8 @@ export default function Home() {
       {/* Recently Played */}
       {tracks_data ? (
         <>
-          <GridItems title="Recently played" data={tracks_data} />
-          <GridItems title="Made for you" data={tracks_data} />
+          <GridItems title="Yakınlarda Çalınanlar" data={tracks_data} />
+          <GridItems title="Senin için" data={tracks_data} />
         </>
       ) : (
         <Skeleton
