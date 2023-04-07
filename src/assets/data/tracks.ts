@@ -4,7 +4,7 @@ export const tracks_data = [
     title: "Patrick Bateman",
     description: "Sigma Grindset",
     artist: "Patrick Bateman",
-    image: "https://i.scdn.co/image/ab67706c0000da847e17cbc31edd95829d39344e",
+    image: "https://i.scdn.co/image/ab67706c0000da844718fa02965e310c1f7a144f",
     type: "",
     src: "https://mobcup.net/va/Ee0d3ddcf37fb69879e54e03fd2079dc2",
   },
