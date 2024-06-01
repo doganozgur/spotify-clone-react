@@ -32,39 +32,36 @@ export default function User() {
           >
             <Menu.Item>
               {({ active }) => (
-                <a
-                  className={`h-10 flex justify-between items-center px-2 text-sm rounded ${
+                <p
+                  className={`h-10 flex justify-between items-center px-2 text-sm rounded cursor-not-allowed ${
                     active ? "bg-white bg-opacity-10" : undefined
                   }`}
-                  href="/#"
                 >
                   Hesap
                   <Icon name="external" size={16} />
-                </a>
+                </p>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
-                  className={`h-10 flex justify-between items-center px-2 text-sm rounded ${
+                <p
+                  className={`h-10 flex justify-between items-center px-2 text-sm rounded cursor-not-allowed ${
                     active ? "bg-white bg-opacity-10" : undefined
                   }`}
-                  href="/#"
                 >
                   Profil
-                </a>
+                </p>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <a
-                  className={`h-10 flex justify-between items-center px-2 text-sm rounded ${
+                <p
+                  className={`h-10 flex justify-between items-center px-2 text-sm rounded cursor-not-allowed ${
                     active ? "bg-white bg-opacity-10" : undefined
                   }`}
-                  href="/#"
                 >
                   Çıkış
-                </a>
+                </p>
               )}
             </Menu.Item>
           </Menu.Items>
