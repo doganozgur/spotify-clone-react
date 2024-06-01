@@ -48,7 +48,7 @@ export default function GridItem({ item }: Props) {
         <img
           src={image}
           alt={title}
-          className={`mb-4 object-cover w-22 h-22 ${imageStyle(type)}`}
+          className={`mb-4 object-cover w-22 h-22 flex-1 ${imageStyle(type)}`}
         />
       }
       <div className="h-16">
