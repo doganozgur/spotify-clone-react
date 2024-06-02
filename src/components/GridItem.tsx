@@ -44,13 +44,11 @@ export default function GridItem({ item }: Props) {
 
   return (
     <article className="flex flex-col bg-darkGray p-4 rounded-md hover:bg-active transition duration-300 ease cursor-pointer relative group">
-      {
-        <img
-          src={image}
-          alt={title}
-          className={`mb-4 object-cover w-22 h-22 flex-1 ${imageStyle(type)}`}
-        />
-      }
+      <img
+        src={image}
+        alt={title}
+        className={`mb-4 object-cover aspect-square flex-1 ${imageStyle(type)}`}
+      />
       <div className="h-16">
         <h4 className="item-title overflow-hidden overflow-ellipsis whitespace-nowrap">
           {title}

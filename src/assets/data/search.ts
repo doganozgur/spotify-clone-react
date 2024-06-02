@@ -29,7 +29,7 @@ export const search_data = [
   {
     id: 4,
     title: "Intouchables - Soundtracks OST",
-    artist: "Rihanna",
+    artist: "moodmode",
     description: "Original Soundtrack",
     image: "https://i.scdn.co/image/d39397d2f6a1525b3fe90369c89ea2d94aac5714",
     type: "podcast",

@@ -66,7 +66,7 @@ export default function GridItems({ data, title, more = true }: Props) {
           {data
             .sort(() => Math.random() - 0.5)
             .map((item: TrackTypes) => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.id} style={{}}>
                 <GridItem key={item.id} item={item} />
               </SwiperSlide>
             ))}
